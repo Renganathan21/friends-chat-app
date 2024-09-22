@@ -20,7 +20,7 @@ const databaseUrl = "mongodb+srv://sathishsatish2002:3T9ashSQUpm3z5pV@cluster0.r
 app.use(
     cors(
         {
-             origin: ["192.168.1.10"],
+             origin: "*",
             credentials:true    ,
             methods:[
                 "GET",
