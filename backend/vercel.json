@@ -1,9 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.js", "use": "@vercel/node" }  // Ensure 'index.js' is your entry point
+    { "src": "index.js", "use": "@vercel/node" }  
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "index.js" }  // Route all requests to your entry point
+    { "src": "/(.*)", "dest": "index.js" }  
   ]
 }
