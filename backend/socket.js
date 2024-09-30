@@ -5,7 +5,7 @@ import Channel from "./model/ChannelModel.js";
 const setupSocket = (server) => {
   const io = new SocketIOServer(server, {
     cors: {
-      origin: process.env.ORIGIN,
+       origin: ["http://192.168.1.10:5173", "https://friends-123.netlify.app"],
       methods: ["GET", "POST"],
       credentials: true,
     },
