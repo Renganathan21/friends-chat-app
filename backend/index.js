@@ -18,21 +18,20 @@ const port = process.env.PORT || 3001;
 const databaseUrl = "mongodb+srv://sathishsatish2002:3T9ashSQUpm3z5pV@cluster0.r3stg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 app.use(
-    cors(
-        {
-             origin: "http://192.168.1.10:5173/",
-            credentials:true    ,
-            methods:[
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE",
-                "PATCH",
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || origin === "http://192.168.1.10:5173") {
+        // Allow local frontend
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  })
+);
 
-            ]
-        }
-    )
-)
 
 
 app.use("/uploads/profiles/",express.static("uploads/profiles"))
