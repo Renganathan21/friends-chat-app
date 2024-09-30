@@ -20,7 +20,7 @@ const databaseUrl = "mongodb+srv://sathishsatish2002:3T9ashSQUpm3z5pV@cluster0.r
 app.use(
     cors(
         {
-             origin: "origin: http://localhost:5173/",
+             origin: "http://192.168.1.10:5173/",
             credentials:true    ,
             methods:[
                 "GET",
