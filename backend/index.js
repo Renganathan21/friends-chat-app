@@ -20,7 +20,7 @@ const databaseUrl = "mongodb+srv://sathishsatish2002:3T9ashSQUpm3z5pV@cluster0.r
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin || origin === "http://192.168.1.10:5173") {
+      if (!origin || origin === "https://friends-123.netlify.app/") {
         // Allow local frontend
         callback(null, true);
       } else {
